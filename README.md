@@ -25,42 +25,43 @@ Things you may want to cover:
  ##usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
+|name|string|null: false, index: true|
 |e-mail|string|null: false|
 |password|string|null: false|
 
 ### Association
 - has_many :messages
 - has_many :group_users
+  has_many :users, through: :group_users
 
- ##groupテーブル
+ ##groupsテーブル
  |Column|Type|Options|
  |------|----|-------|
- |name|string|null: false, foreign_key:true|
- |member|string|null: false, foreign_key: true|
+ |name|string|null: false|
 
  ### Association
 - has_many :messages
 - has_many :group_users
+  has_many :users, through: :group_users
 
- ##messageテーブル
+ ##messagesテーブル
  |Column|Type|Options|
  |------|----|-------|
  |body|text||
  |image|text||
- |user_id|integer|null:false, foreign_key: true|
- |group_id|integer|null:false, foreign_key: true|
+ |user_id|references|null:false, foreign_key: true|
+ |group_id|references|null:false, foreign_key: true|
 
  ### Association
 - belongs_to :group
 - belongs_to :user
 
- ##group_usersテーブル
+ ##groups_usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group

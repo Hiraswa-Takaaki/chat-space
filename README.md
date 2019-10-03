@@ -32,7 +32,7 @@ Things you may want to cover:
 ### Association
 - has_many :messages
 - has_many :group_users
-  has_many :users, through: :group_users
+  has_many :groups, through: :groups_users
 
  ##groupsテーブル
  |Column|Type|Options|
@@ -42,7 +42,7 @@ Things you may want to cover:
  ### Association
 - has_many :messages
 - has_many :group_users
-  has_many :users, through: :group_users
+  has_many :users, through: :groups_users
 
  ##messagesテーブル
  |Column|Type|Options|

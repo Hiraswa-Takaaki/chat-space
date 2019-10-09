@@ -1,0 +1,183 @@
+.header {
+  height: 35px;
+  background-color: #38AEF0;
+  color: #ffffff;
+  &__logo {
+    text-align: center;
+    font-size: 18px;
+    line-height: 35px;
+  }
+}
+  .name-box{
+    float: left;
+    height: 96px;
+    padding-bottom:11px;
+    background-color:#253141;
+    width: 300px;
+    &__left{
+      font-size: 16px;
+      font-weight: bold;
+      float:left;
+      padding:40px 0 40px 20px;
+      color: #ffffff;
+    }
+    &__right{
+      float:right;
+      padding:40px 20px 40px 20px;
+      color: #ffffff;
+      &--icon{
+      }
+    }
+  }
+
+  .team-box{
+    float:left;
+    padding-top:20px;
+    background-color:#2f3e51;
+    width: 300px;
+    height: 630px;
+
+    &__first{
+      font-size: 15px;
+      font-weight: bold;
+      color: #ffffff;
+      margin:0px 20px 5px 20px;
+    }
+    &__second{
+      font-size: 11px;
+      font-weight: bold;
+      color: #ffffff;
+      margin:0px 20px 40px 20px;
+    }
+    &__third{
+      font-size: 15px;
+      font-weight: bold;
+      color: #ffffff;
+      margin:0px 20px 5px 20px;
+    }
+    &__fourth{
+      font-size: 11px;
+      font-weight: bold;
+      color: #ffffff;
+      margin:0px 20px 40px 20px;
+    }
+    &__fifth{
+      font-size: 15px;
+      font-weight: bold;
+      color: #ffffff;
+      margin:0px 20px 5px 20px;
+    }
+    &__sixth{
+      font-size: 11px;
+      font-weight: bold;
+      color: #ffffff;
+      margin:0px 20px 40px 20px;
+    }
+  }
+  
+  .teamname-box{
+    float:left;
+    height: 106px;
+    border-bottom:solid #eeeeee 1px;
+    width: calc(100vw - 300px);
+    background-color: white;
+
+    &__1st{
+      float:left;
+      color:#333333;
+      font-size: 20px;
+      margin:35px 0px 15px 40px;
+    }
+    &__2nd{
+      clear:both;
+      color:#333333;
+      font-size: 12px;
+      margin:0px 0px 0px 40px;
+    }
+    &__edit{
+      height: 40px;
+      float: right;
+      color:#38AEF0;
+      border:solid #38AEF0 1px;
+      font-size: 20px;
+      margin:28px 40px 0px 0px;
+      padding:10px 20px 0 20px;
+      text-align: center;
+    }
+  }
+
+  .message-box{
+    float:left;
+    background-color: #fafafa;
+    width: calc(100vw - 300px);
+    height: 540px;
+
+    &__1st{
+      float:left;
+      color:#333333;
+      font-size: 20px;
+      font-weight: bold;
+      margin:46px 0px 10px 40px;
+    }
+    &__2nd{
+      float: left;
+      color:#999999;
+      font-size: 12px;
+      margin:46px 0px 10px 10px;
+    }
+    &__3rd{
+      clear: both;
+      color:#333333;
+      font-size: 12px;
+      margin:10px 0px 40px 40px;
+    }
+    &__4th{
+      float: left;
+      color:#434A54;
+      font-size: 16px;
+      font-weight: bold;
+      margin-left:40px;
+    }
+    &__5th{
+      float: left;
+      color:#999999;
+      font-size: 12px;
+      margin:0px 0px 10px 10px;
+    }
+    &__6th{
+      width: 100vw;
+      float: left;
+      color:#434A54;
+      font-size: 16px;
+      margin:10px 0 0 40px;
+    }
+  }
+
+  .text-box{
+    float: left;
+    height:110px;
+    width: calc(100vw - 300px);
+    background-color:#e2dfdf;
+    &__text{
+      font-size:16px;
+      margin: 25px 15px 25px 40px;
+      background-color: white; 
+      float: left;
+      color: #434a54;
+      padding: 17px 750px 17px 10px;
+      .fa{
+        position: relative; left: 730px;
+        font-size: 1.3rem;
+      }
+    }
+    &__send{
+      float: right;
+      background-color: #38AEF0;
+      margin: 25px 40px 25px 15px;
+      padding:18px 40px;
+      font-size: 14px;
+      color: white;
+      text-align: center;
+    }
+  }
+  

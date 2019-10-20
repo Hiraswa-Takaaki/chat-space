@@ -10,49 +10,15 @@
     
 .teamname-box
   .teamname-box__1st
-    -# testgroup
+
   .teamname-box__edit
     Edit
-  -# .teamname-box__2nd
-  -#   testgroup2
-  
 
 .team-box
-  -# .team-box__first
-  -#   test-aaa
-  -# .team-box__second
-  -#   さようなら
-  -# .team-box__third
-  -#   Sample-group
-  -# .team-box__fourth
-  -#   hello!
-  -# .team-box__fifth
-  -#   example
-  -# .team-box__sixth
-  -#   まだメッセージがありません
-
 
 .message-box
   .messages
     = render @messages
-
--# .text-box
--#   .text-box__text
--#     type a message
--#     = fa_icon'image',class:"textbox__text--icon"
-      
--#   .text-box__send
--#     Send
-
--# .text-box
--#   = form_for [@group, @message] do |f|
--#     = f.text_field :content, class: 'text-box__text', placeholder: 'type a message'
--#     .fa
--#       = f.label :image, class: 'fa' do
--#         = fa_icon 'image', class: 'textbox__text--icon'
--#         = f.file_field :image, class: 'fa'
--#     = f.submit 'Send', class: 'text-box__send'
-
 
 .form
   = form_for [@group, @message] do |f|

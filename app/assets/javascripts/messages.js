@@ -1,11 +1,7 @@
 
 $(function(){
   function buildMessage(post){
-    if (post.image){
-      var imageHTML=`<img src=${post.image}>`
-      } else {
-      var imageHTML = ""
-      }
+    var image = post.image ? `<img src=${post.image}>`: '';
     var html = `<div class="message">
                   <div class="upper-message">
                   <div class="upper-message__user-name">
@@ -19,7 +15,7 @@ $(function(){
                   <p class="lower-message__content">
                     ${post.content}
                   </p>
-                    ${imageHTML}
+                    ${image}
                   </div>
                 </div>`
     return html;
@@ -40,12 +36,12 @@ $(function(){
     .done(function(post){
       var html = buildMessage(post);
       $('.messages').append(html)
-      $('#message_content').val('')
+      $('form')[0].reset();
       $('.submit-btn').attr('disabled', false);
       $('.message-box').animate({scrollTop: $('.message-box')[0].scrollHeight}, 'fast');
     })
     .fail(function(){
-      alert('エラー');
+      alert('送信に失敗しているよ');
     })
   })
 });

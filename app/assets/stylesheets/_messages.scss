@@ -35,7 +35,7 @@
     padding-top:20px;
     background-color:#2f3e51;
     width: 300px;
-    height: 630px;
+    height: calc(100vh - 160px);
   }
   
   .teamname-box{
@@ -73,8 +73,11 @@
     float:left;
     background-color: #fafafa;
     width: calc(100vw - 300px);
-    height: 540px;
-
+    height: calc(100vh - 230px);
+    overflow: scroll;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    
     .messages{
       float:left;
       color:#333333;
@@ -87,7 +90,7 @@
 .form{
   float:right;
   width: calc(100vw - 380px);
-  height: 70px;
+  height: 50px;
   padding:20px 40px;
   background:#ddd;
   .new_message{

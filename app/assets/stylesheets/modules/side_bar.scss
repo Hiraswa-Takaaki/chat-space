@@ -6,7 +6,7 @@
     background-color: $side_blue_dark;
     height: 100px;
     line-height: 100px;
-    padding: 0 20px;
+    padding: 0 20px 2px 20px;
     &__name {
       display: inline-block;
       font-size: $side_header_font;
@@ -24,22 +24,28 @@
       }
     }
   }
-
+  
   .groups {
     background-color: $side_blue_light;
     height: calc(100vh - 100px);
     padding: 0 20px;
+    overflow: scroll;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    
     .group {
       box-sizing: border-box;
-      padding: 20px 0 40px;
+      margin:20px 20px 0 0;
       &__name {
         color: $white;
         font-size: $side_group_name;
+        font-size:15px;
       }
       &__message {
         color: $white;
         font-size: $side_group_message;
         margin-top: 5px;
+        font-size:11px;
       }
     }
   }

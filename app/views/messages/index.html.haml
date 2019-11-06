@@ -1,20 +1,29 @@
-.header 
-  .header__logo
-    グループを作成しました
 .name-box
   .name-box__left
-    seo
+    = current_user.name
   .name-box__right
-    =fa_icon 'edit', class:"name-box__right--icon"
-    =fa_icon 'cog', class:"name-box__right--icon"
-    
+    = link_to new_group_path do
+      =fa_icon 'edit', class:"name-box__right--icon"
+    = link_to edit_user_path(current_user) do
+      =fa_icon 'cog', class:"name-box__right--icon"
+
 .teamname-box
   .teamname-box__1st
-
+    = @group.name
   .teamname-box__edit
-    Edit
-
-.team-box
+    = link_to edit_group_path(@group.id) do
+      Edit
+  .teamname-box__2nd
+    - @group.users.each do |user_name|
+      = user_name.name
+.groupss
+  - current_user.groups.each do |group|
+    .groups
+      = link_to group_messages_path(group) do
+        .groups__name
+          = group.name
+        .groups__message
+          = group.show_last_message
 
 .message-box
   .messages

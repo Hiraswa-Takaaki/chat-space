@@ -26,15 +26,21 @@ $(document).on('turbolinks:load', function() {
     $(".js-add-user").append(html);
   }
   function addMember(userId) {
-    let html = `<input value="${userId}" name="group[user_ids][]" type="hidden" id="group_user_ids_${userId}" />`;
+    let html = `<input value="${userId}" name="group[user_ids][]" type="hidden" id="group_user_ids_${userId}" class="js-user"/>`;
     $(`#${userId}`).append(html);
   }
   $("#user-search-field").on("keyup", function() {
     let input = $("#user-search-field").val();
+
+    let arry = [];    
+    $(".js-user").each(function(i,ele){
+      arry.push(ele.value)
+    })
+
     $.ajax({
       type: "GET",
       url: "/users",
-      data: { keyword: input },
+      data: { keyword: input,userid: arry },
       dataType: "json"
     })
       .done(function(users) {
@@ -54,7 +60,7 @@ $(document).on('turbolinks:load', function() {
         alert("通信エラーです。ユーザーが表示できません。");
       });
   });
-  $(document).on("click", ".chat-group-user__btn--add", function() {
+  $("#user-search-result").on("click", ".chat-group-user__btn--add", function() {
     const userName = $(this).attr("data-user-name");
     const userId = $(this).attr("data-user-id");
     $(this)
